@@ -1,0 +1,4 @@
+Sitemap: http://adalace.org/sitemapindex.xml
+
+User-Agent: *
+Host: adalace.org
