@@ -129,8 +129,8 @@ NAVIGATION_LINKS = {
 
 # Name of the theme to use.
 #THEME = "bootstrap3"
-#THEME = "zen-ipython"
-THEME = "monospace"
+THEME = "zen-ipython"
+#THEME = "monospace"
 
 #zen-ipython only config
 NAVIGATION_LINKS = {
