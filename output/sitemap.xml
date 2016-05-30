@@ -7,7 +7,7 @@
                         http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
  <url>
   <loc>http://adalace.org/</loc>
-  <lastmod>2016-05-29T20:27:00Z</lastmod>
+  <lastmod>2016-05-29T22:08:00Z</lastmod>
  </url>
  <url>
   <loc>http://adalace.org/2016/</loc>
@@ -15,7 +15,7 @@
  </url>
  <url>
   <loc>http://adalace.org/archive.html</loc>
-  <lastmod>2016-05-29T20:27:00Z</lastmod>
+  <lastmod>2016-05-29T22:09:00Z</lastmod>
  </url>
  <url>
   <loc>http://adalace.org/categories/</loc>
@@ -32,5 +32,9 @@
  <url>
   <loc>http://adalace.org/posts/ipython-notebook/</loc>
   <lastmod>2016-05-29T20:27:00Z</lastmod>
+ </url>
+ <url>
+  <loc>http://adalace.org/stories/about-me/</loc>
+  <lastmod>2016-05-29T22:08:00Z</lastmod>
  </url>
 </urlset>
