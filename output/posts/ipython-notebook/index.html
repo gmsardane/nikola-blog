@@ -16,19 +16,8 @@ fb: http://ogp.me/ns/fb#
 <meta property="og:site_name" content="Adalace">
 <meta property="og:title" content="Bongbong, Leni, and Benford: The Philippine Vice Presidential Race">
 <meta property="og:url" content="http://adalace.org/posts/ipython-notebook/">
-<meta property="og:description" content="https://www.facebook.com/notes/gen-n-aris-sardane-calamba/bongbong-leni-and-benford-the-philippine-vice-presidential-race/10153818025948051
-
-
-
-
-
-
-In [1]:
-
-    
-import pandas as pd
-import numpy as np
-i">
+<meta property="og:description" content="Due to the deluge of “expert” opinion online regarding the Phil VP race, we decided to do our own due diligence in the search for the truth. Special thanks to Reina Reyes for the dataset.
+In the conte">
 <meta property="og:type" content="article">
 <meta property="article:published_time" content="2016-05-29T15:10:34-05:00">
 </head>
@@ -65,14 +54,71 @@ i">
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p><a href="https://www.facebook.com/notes/gen-n-aris-sardane-calamba/bongbong-leni-and-benford-the-philippine-vice-presidential-race/10153818025948051">https://www.facebook.com/notes/gen-n-aris-sardane-calamba/bongbong-leni-and-benford-the-philippine-vice-presidential-race/10153818025948051</a></p>
+<p>Due to the deluge of “expert” opinion online regarding the Phil VP race, we decided to do our own due diligence in the search for the truth. Special thanks to Reina Reyes for the <a href="https://gist.github.com/reinareyes/b32fc96972bbb9c3d0a9d754ab02d024">dataset</a>.</p>
+<p>In the context of the data that are readily available, we want an approach that is quick and simple. In our opinion, the data that we have would not be sufficient to prove whether or not fraud was committed, but the data would be useful in verifying whether or not BBM’s claim is reasonable.</p>
+<p>BBM claims that at some point in time (~roughly 3AM of May 10th, Phil time) the transmitted data were rigged, making way for Leni’s eventual lead in the VP race. One nice feature of such a claim that we can exploit is that there are effectively two sets of data, separated in time: (1) a set of clean, “un-manufactured” data (i.e. votes transmitted prior to ~3AM), and (2) a set of fraudulent, manufactured data (i.e. votes transmitted after ~3AM).</p>
+<p>From a statistical standpoint, datasets have underlying distributions, dependent upon the fundamental process(es) that generated the dataset. To manufacture data, one must go to great lengths to preserve the underlying distributions of the data. Aside from the difficulty of generating fake data that have the same underlying distributions of the real data, you need to have prior knowledge of these distributions, so you would be able to preserve them. And such a feat is non-trivial, especially in a “process” as intricate as the Philippine elections -- with data still continuously pouring in (See this <a href="http://www.pnas.org/content/109/41/16469.full">paper</a> for example).</p>
+<p>While brainstorming for possible underlying distributions, we decided to check whether the transmitted election counts data are consistent with Benford’s Law, which is useful in fraud detection<sup>[1](http://www.journalofaccountancy.com/Issues/1999/May/nigrini)</sup>, for the very reason that “people who make up figures tend to distribute their digits fairly uniformly”<sup>[2](http://www.tandfonline.com/doi/abs/10.1080/00031305.1972.10478934)</sup>.  (A quick intro to <a href="https://en.wikipedia.org/wiki/Benford%27s_law">Benford’s Law</a> can be found in Wikipedia.)</p>
 
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h3 id="What-is-Benford’s-Law?">What is Benford’s Law?<a class="anchor-link" href="#What-is-Benford%E2%80%99s-Law?">¶</a>
+</h3>
+<p>In essence, Benford’s Law says that leading significant digits of a collection of numbers follow a certain discrete distribution. Note that it is not a "law" in the same sense as Newton's Law of Gravity is. Rather, it is a "law" in the sense that it has been observed so many times in nature. Examples of real-life datasets demonstrating Benford's law are physical constants, atomic weights, human population, Fibonacci numbers, etc.</p>
+<h3 id="Does-the-dataset-obey-Benford’s-Law?">Does the dataset obey Benford’s Law?<a class="anchor-link" href="#Does-the-dataset-obey-Benford%E2%80%99s-Law?">¶</a>
+</h3>
+<p>To better understand the ‘first-digit’ statistic relevant to Benford’s Law, consider the table below. The table on the left shows the first few transmissions coming from ARMM. The last column ‘leading_digit’ gives the first digit of the numerical value of the ‘votes’ column. The number of times a given leading digit occurs is listed in the ‘frequency’ column on the right table, which we then divide (i.e normalize) by the total number of transmissions, which in this case is twenty (i.e 20 rows).</p>
+<p><img src="https://scontent-dfw1-1.xx.fbcdn.net/l/t31.0-8/p720x720/13246235_10153822543308051_8918865709790372371_o.jpg" alt="alt text" title="Table 1: An example dataset showing twenty transmissions from ARMM.">
+Table 1: An example dataset showing twenty transmissions from ARMM.</p>
+<p>Figure 1 depicts the time evolution of the votes for both VP candidates. The blue line marks 3AM (05-10-16), when Leni's votes were about to overtake BBM's. Now we implement the method just described to this entire data set, and we get a result that is clearly consistent with Benford’s Law.</p>
+<p><img src="https://scontent-dfw1-1.xx.fbcdn.net/t31.0-8/s2048x2048/13217522_10153820961333051_4942588677885484901_o.jpg" alt="alt text" title="Figure 1: Cumulative Votes">
+Figure 1: Left: Cumulative number of votes as a function of time. The blue line (3AM, May 10th, 2016) marks the approximate time when Leni was about to overtake BBM. Right: The corresponding first-digit histogram of the vote counts per transmission normalized by the total number of transmissions for both BBM and Leni. The observed first-digit distribution is clearly consistent with Benford’s law (green curve).</p>
+<h3 id="I-know-what-you-did-around-3AM?">I know what you did around 3AM?<a class="anchor-link" href="#I-know-what-you-did-around-3AM?">¶</a>
+</h3>
+<p>Now we ask the question: Is it reasonable for  BBM to claim that the "true" and unmanipulated election numbers lie only on the left side of this blue line, whilst those on the right, are the result of systematic manipulation? If it were true, we expect the vote counts on left side to follow Benford's law. On the other hand, those on the right would be distributed uniformly, again because statistically  "people who make up figures tend to distribute their digits fairly uniformly", or at least different from what is expected from  Benford’s Law. 
+We show in Figure 2 that the first-digit distribution of votes transmitted PRIOR (left) to 3AM of May 10th, 2016 are virtually the same as the votes transmitted for AFTER (right) 3AM. Both consistent to Benford’s law at a high level of significance implies that nothing anomalous is evident.</p>
+<p><img src="https://scontent-dfw1-1.xx.fbcdn.net/t31.0-8/13246445_10153820968678051_6440630978423568735_o.jpg" alt="alt text" title="Figure 2: Pre and Post 3AM data">
+Figure 2: First-Digit distributions of ALL transmitted votes. Left: PRIOR to 3AM (May 10, 2016). Right: AFTER 3AM (May 10, 2016). Both distributions are essentially the same, consistent to Benford’s Law.</p>
+<p>We show in Figure 2 that the first-digit distribution of votes transmitted PRIOR (left) to 3AM of May 10th, 2016 are virtually the same as the votes transmitted for AFTER (right) 3AM. Both consistent to Benford’s law at a high level of significance  implies that nothing anomalous is evident.</p>
+<p><img src="https://scontent-dfw1-1.xx.fbcdn.net/t31.0-8/p720x720/13247834_10153820998498051_4203486656982646698_o.jpg" alt="alt text" title="Figure 3: Pre and Post 3AM data separated by candidate">
+Figure 3: Top Left: BBM’s first-digit distribution for the number of votes transmitted PRIOR to 3AM of May 10th. Top Right: BBM’s first-digit distribution for the number of votes transmitted AFTER 3AM (05-10-2016). Bottom Left: Leni’s first-digit distribution for the number of votes transmitted PRIOR to 3AM. Bottom Right: Leni’s first-digit distribution for the number of votes transmitted AFTER to 3AM. Qualitatively, all curves are consistent with Benford’s Law.</p>
+<p>We go a little further and subdivide the votes by time and by candidate. From Figure 3, qualitatively, the distributions of the first-digits of the votes transmitted match quite well with what we expect from Benford’s Law. A series of quick hypothesis-testing (via the chi-square statistic) for all plots strongly indicate that the expected and observed distributions are essentially the same. This implies that BBM’s and Leni’s vote counts have the essentially the same first-digit distribution.</p>
+<h3 id="What-about-during-other-times?">What about during other times?<a class="anchor-link" href="#What-about-during-other-times?">¶</a>
+</h3>
+<p>We extend the analysis further and subdivide the data into two-hour intervals. The results, compiled into a  GIF image below. Any drastic change would have been an indication of a potential anomaly. The small changes in between time steps are expected since subdividing the data further into smaller time intervals naturally results to  sparsity in the samples.</p>
+<p><img src="https://raw.githubusercontent.com/gmsardane/Phil-VP-Elections/master/git_distribution_new.gif" alt="alt text" title="Figure 4: First digit distribution per 2-hour window"></p>
+<h3 id="So-what-now?">So what now?<a class="anchor-link" href="#So-what-now?">¶</a>
+</h3>
+<p>Therefore, we contend that BBM’s claim is UNLIKELY to be true. Note, however, that not all election data will necessarily follow Benford’s law. It would not be appropriate to draw conclusions of fraud (or non-fraud) solely on the basis comparisons relative to Benford’s Law. What's unique about the 2016 VP election, however, is that BBM claims that the initial transmissions (conveniently, when he was winning) were honest, but then ‘suddenly’ became rigged, as a result of some unscrupulous act. What we have shown is that the first-digit distributions are all consistent to the same expected distribution, and no evidence of anomalous deviations is apparent. 
+Though still a possibility, an act of number-manufacturing that was able to preserve the first-digit distribution of the transmitted votes, at various times, in DOTA-speak, is “beyond godlike”.</p>
+<h3 id="An-Addendum">An Addendum<a class="anchor-link" href="#An-Addendum">¶</a>
+</h3>
+<p>For the curious, what about the last-digit distribution? Benford’s Law? Common sense tells us a flat distribution, and indeed this is what we see. The distributions prior to 3AM (May 10th, 2016) are consistent with those after 3AM, which are in turn consistent to the same uniform distribution. This, by itself, is an additional quick check in support of the argument above against BBM’s claim.</p>
+<p><img src="https://scontent-dfw1-1.xx.fbcdn.net/t31.0-8/p720x720/13221314_10153821008408051_1591194826537221291_o.jpg" alt="alt text" title="Figure 4: Last Digit Distribution">
+Top Left: BBM’s last-digit distribution for the number of votes transmitted PRIOR to 3AM of May 10th. Top Right: BBM’s last-digit distribution for the number of votes transmitted AFTER to 3AM of May 10th. Bottom Left: Leni’s last-digit distribution for the number of votes transmitted PRIOR to 3AM of May 10th. Bottom Right: Leni’s last-digit distribution of the number of votes transmitted AFTER to 3AM of May 10th. Qualitatively, all curves are consistent with a uniform distribution, as expected.</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h3 id="IPython-Notebook-used-to-generate-plots">IPython Notebook used to generate plots<a class="anchor-link" href="#IPython-Notebook-used-to-generate-plots">¶</a>
+</h3>
 </div>
 </div>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In [1]:</div>
+<div class="prompt input_prompt">In [ ]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython2"><pre><span></span><span class="kn">import</span> <span class="nn">pandas</span> <span class="kn">as</span> <span class="nn">pd</span>
