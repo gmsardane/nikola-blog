@@ -481,7 +481,7 @@ FRONT_INDEX_HEADER = {
 }
 
 # Create per-month archives instead of per-year
-# CREATE_MONTHLY_ARCHIVE = False
+CREATE_MONTHLY_ARCHIVE = True 
 # Create one large archive instead of per-year
 # CREATE_SINGLE_ARCHIVE = False
 # Create year, month, and day archives each with a (long) list of posts
@@ -764,7 +764,7 @@ IMAGE_FOLDERS = {'images': 'images'}
 # )
 
 # Show teasers (instead of full posts) in indexes? Defaults to False.
-# INDEX_TEASERS = False
+INDEX_TEASERS = True 
 
 # HTML fragments with the Read more... links.
 # The following tags exist and are replaced for you:
@@ -999,7 +999,7 @@ MARKDOWN_EXTENSIONS = ['fenced_code', 'codehilite', 'extra']
 
 # Only inlclude teasers in Atom and RSS feeds. Disabling include the full
 # content. Defaults to True.
-# FEED_TEASERS = True
+FEED_TEASERS = False
 
 # Strip HTML from Atom annd RSS feed summaries and content. Defaults to False.
 # FEED_PLAIN = False
@@ -1028,20 +1028,20 @@ MARKDOWN_EXTENSIONS = ['fenced_code', 'codehilite', 'extra']
 # This search form works for any site and looks good in the "site" theme where
 # it appears on the navigation bar:
 #
-# SEARCH_FORM = """
-# <!-- DuckDuckGo custom search -->
-# <form method="get" id="search" action="https://duckduckgo.com/"
-#  class="navbar-form pull-left">
-# <input type="hidden" name="sites" value="%s">
-# <input type="hidden" name="k8" value="#444444">
-# <input type="hidden" name="k9" value="#D51920">
-# <input type="hidden" name="kt" value="h">
-# <input type="text" name="q" maxlength="255"
-#  placeholder="Search&hellip;" class="span2" style="margin-top: 4px;">
-# <input type="submit" value="DuckDuckGo Search" style="visibility: hidden;">
-# </form>
-# <!-- End of custom search -->
-# """ % SITE_URL
+SEARCH_FORM = """
+<!-- DuckDuckGo custom search -->
+<form method="get" id="search" action="https://duckduckgo.com/"
+ class="navbar-form pull-left">
+<input type="hidden" name="sites" value="%s">
+<input type="hidden" name="k8" value="#444444">
+<input type="hidden" name="k9" value="#D51920">
+<input type="hidden" name="kt" value="h">
+<input type="text" name="q" maxlength="255"
+ placeholder="Search&hellip;" class="span2" style="margin-top: 4px;">
+<input type="submit" value="DuckDuckGo Search" style="visibility: hidden;">
+</form>
+<!-- End of custom search -->
+""" % SITE_URL
 #
 # If you prefer a Google search form, here's an example that should just work:
 # SEARCH_FORM = """

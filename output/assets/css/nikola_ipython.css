@@ -38,7 +38,7 @@ div.text_cell_render {
 }
 
 .rendered_html p {
-  text-align: left;
+  text-align: justify; 
 }
 
 .rendered_html ul {

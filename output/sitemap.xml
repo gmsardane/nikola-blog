@@ -7,34 +7,54 @@
                         http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
  <url>
   <loc>http://adalace.org/</loc>
-  <lastmod>2016-05-29T22:08:00Z</lastmod>
+  <lastmod>2016-06-03T05:13:00Z</lastmod>
  </url>
  <url>
   <loc>http://adalace.org/2016/</loc>
-  <lastmod>2016-05-29T20:27:00Z</lastmod>
+  <lastmod>2016-06-13T14:18:00Z</lastmod>
+ </url>
+ <url>
+  <loc>http://adalace.org/2016/05/</loc>
+  <lastmod>2016-06-13T14:18:00Z</lastmod>
+ </url>
+ <url>
+  <loc>http://adalace.org/2016/06/</loc>
+  <lastmod>2016-06-13T14:18:00Z</lastmod>
  </url>
  <url>
   <loc>http://adalace.org/archive.html</loc>
-  <lastmod>2016-05-29T22:09:00Z</lastmod>
+  <lastmod>2016-06-22T18:59:00Z</lastmod>
  </url>
  <url>
   <loc>http://adalace.org/categories/</loc>
-  <lastmod>2016-05-29T20:14:00Z</lastmod>
+  <lastmod>2016-06-02T05:46:00Z</lastmod>
  </url>
  <url>
   <loc>http://adalace.org/galleries/</loc>
-  <lastmod>2016-05-29T20:14:00Z</lastmod>
+  <lastmod>2016-06-02T05:46:00Z</lastmod>
  </url>
  <url>
   <loc>http://adalace.org/listings/</loc>
-  <lastmod>2016-05-29T20:14:00Z</lastmod>
+  <lastmod>2016-06-02T05:46:00Z</lastmod>
+ </url>
+ <url>
+  <loc>http://adalace.org/posts/effects-of-the-new-hst-2016-calibration-corrections-m31-results-pid-11658/</loc>
+  <lastmod>2016-06-22T18:59:00Z</lastmod>
  </url>
  <url>
   <loc>http://adalace.org/posts/ipython-notebook/</loc>
-  <lastmod>2016-05-29T20:27:00Z</lastmod>
+  <lastmod>2016-06-02T05:46:00Z</lastmod>
+ </url>
+ <url>
+  <loc>http://adalace.org/posts/python-cheatsheet/</loc>
+  <lastmod>2016-06-13T00:02:00Z</lastmod>
  </url>
  <url>
   <loc>http://adalace.org/stories/about-me/</loc>
-  <lastmod>2016-05-29T22:08:00Z</lastmod>
+  <lastmod>2016-06-02T05:46:00Z</lastmod>
+ </url>
+ <url>
+  <loc>http://adalace.org/stories/gmos-reduction-script/</loc>
+  <lastmod>2016-06-02T05:46:00Z</lastmod>
  </url>
 </urlset>
