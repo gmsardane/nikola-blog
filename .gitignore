@@ -85,6 +85,7 @@ ENV/
 #nikola
 cache/
 *.db
+*.db.*
 # Spyder project settings
 .spyderproject
 
