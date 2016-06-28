@@ -23,11 +23,19 @@
  </url>
  <url>
   <loc>http://adalace.org/archive.html</loc>
-  <lastmod>2016-06-22T18:59:00Z</lastmod>
+  <lastmod>2016-06-28T04:02:00Z</lastmod>
  </url>
  <url>
   <loc>http://adalace.org/categories/</loc>
-  <lastmod>2016-06-02T05:46:00Z</lastmod>
+  <lastmod>2016-06-22T20:37:00Z</lastmod>
+ </url>
+ <url>
+  <loc>http://adalace.org/categories/astro/</loc>
+  <lastmod>2016-06-22T20:37:00Z</lastmod>
+ </url>
+ <url>
+  <loc>http://adalace.org/categories/python/</loc>
+  <lastmod>2016-06-22T20:37:00Z</lastmod>
  </url>
  <url>
   <loc>http://adalace.org/galleries/</loc>
@@ -38,16 +46,40 @@
   <lastmod>2016-06-02T05:46:00Z</lastmod>
  </url>
  <url>
+  <loc>http://adalace.org/posts/calculating-dndz-parameters/</loc>
+  <lastmod>2016-06-24T19:34:00Z</lastmod>
+ </url>
+ <url>
   <loc>http://adalace.org/posts/effects-of-the-new-hst-2016-calibration-corrections-m31-results-pid-11658/</loc>
   <lastmod>2016-06-22T18:59:00Z</lastmod>
+ </url>
+ <url>
+  <loc>http://adalace.org/posts/finding-galaxies-within-100-kpc-of-q1532%2B0613/</loc>
+  <lastmod>2016-06-28T02:50:00Z</lastmod>
+ </url>
+ <url>
+  <loc>http://adalace.org/posts/installing-python-mysqlconnector/</loc>
+  <lastmod>2016-06-23T22:44:00Z</lastmod>
  </url>
  <url>
   <loc>http://adalace.org/posts/ipython-notebook/</loc>
   <lastmod>2016-06-02T05:46:00Z</lastmod>
  </url>
  <url>
+  <loc>http://adalace.org/posts/ocaml-and-jupyter/</loc>
+  <lastmod>2016-06-23T21:22:00Z</lastmod>
+ </url>
+ <url>
   <loc>http://adalace.org/posts/python-cheatsheet/</loc>
   <lastmod>2016-06-13T00:02:00Z</lastmod>
+ </url>
+ <url>
+  <loc>http://adalace.org/posts/ssh-login-without-password/</loc>
+  <lastmod>2016-06-23T23:36:00Z</lastmod>
+ </url>
+ <url>
+  <loc>http://adalace.org/posts/the-sdss-1d-spectrum-of-q1357%2B0525/</loc>
+  <lastmod>2016-06-28T02:50:00Z</lastmod>
  </url>
  <url>
   <loc>http://adalace.org/stories/about-me/</loc>
