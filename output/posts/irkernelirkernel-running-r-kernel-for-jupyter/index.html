@@ -7,7 +7,7 @@ fb: http://ogp.me/ns/fb#
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width">
-<title>About Me | Adalace</title>
+<title>IRkernel/IRkernel: Running R kernel for Jupyter | Adalace</title>
 <link href="../../assets/css/bitter.css" rel="stylesheet" type="text/css">
 <link href="../../assets/css/main.css" rel="stylesheet" type="text/css">
 <link href="../../assets/css/rst.css" rel="stylesheet" type="text/css">
@@ -15,7 +15,7 @@ fb: http://ogp.me/ns/fb#
 <link href="../../assets/css/ipython.min.css" rel="stylesheet" type="text/css">
 <link href="../../assets/css/nikola_ipython.css" rel="stylesheet" type="text/css">
 <link rel="alternate" type="application/rss+xml" title="RSS" href="../../rss.xml">
-<link rel="canonical" href="http://adalace.org/stories/about-me/">
+<link rel="canonical" href="http://adalace.org/posts/irkernelirkernel-running-r-kernel-for-jupyter/">
 <meta property="fb:app_id" content="">
 <script src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS_HTML"></script><script type="text/x-mathjax-config">
 MathJax.Hub.Config({
@@ -32,11 +32,18 @@ MathJax.Hub.Config({
 });
 </script><!--[if lt IE 9]><script src="/assets/js/html5.js"></script><![endif]--><meta name="author" content="lovelyquark">
 <meta property="og:site_name" content="Adalace">
-<meta property="og:title" content="About Me">
-<meta property="og:url" content="http://adalace.org/stories/about-me/">
-<meta property="og:description" content="I am an astrophysicist, specializing on quasars as probes of the most recent eight billion years of our cosmic history. As a data enthusiast, I like to make pretty and vivid plots that could help peop">
+<meta property="og:title" content="IRkernel/IRkernel: Running R kernel for Jupyter">
+<meta property="og:url" content="http://adalace.org/posts/irkernelirkernel-running-r-kernel-for-jupyter/">
+<meta property="og:description" content="In order to be able to use native R kernel for Jupyter, 
+you need to do the following:
+1) Install R
+brew tap homebrew/science 
+brew install r
+
+2) Run R in a terminal, the run the following
+install.pac">
 <meta property="og:type" content="article">
-<meta property="article:published_time" content="2016-05-29T17:08:04-05:00">
+<meta property="article:published_time" content="2016-07-14T16:39:33-05:00">
 </head>
 <body>
     <section class="social"><ul>
@@ -50,11 +57,11 @@ MathJax.Hub.Config({
 
         </ul></section><section class="page-content"><div class="content" rel="main">
     <div class="post">
-        <h1 class="p-name entry-title" itemprop="headline name">About Me</h1>
+        <h1 class="p-name entry-title" itemprop="headline name">IRkernel/IRkernel: Running R kernel for Jupyter</h1>
 
         <div class="meta">
             <div class="authordate">
-                <time class="timeago" datetime="2016-05-29T17:08:04-05:00">2016-05-29 17:08</time>
+                <time class="timeago" datetime="2016-07-14T16:39:33-05:00">2016-07-14 16:39</time>
             
                       |  
         <a href="index.ipynb" id="sourcelink">Source</a>
@@ -71,7 +78,17 @@ MathJax.Hub.Config({
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>I am an astrophysicist, specializing on quasars as probes of the most recent eight billion years of our cosmic history. As a data enthusiast, I like to make pretty and vivid plots that could help people make informed decisions. I enjoy watching action-packed DOTA games and I find Naruto inspiring.  My most important, rewarding and amazing role, thus far, is being Mom to my little Boss, Adalace.</p>
+<p>In order to be able to use native R kernel for Jupyter, 
+you need to do the following:</p>
+<p>1) Install R</p>
+<div class="highlight"><pre><span></span>brew tap homebrew/science 
+brew install r
+</pre></div>
+<p>2) Run R in a terminal, the run the following</p>
+<div class="highlight"><pre><span></span>install.packages<span class="o">(</span>c<span class="o">(</span><span class="s1">'repr'</span>, <span class="s1">'pbdZMQ'</span>, <span class="s1">'devtools'</span><span class="o">))</span>
+devtools::install_github<span class="o">(</span>c<span class="o">(</span><span class="s1">'IRkernel/IRdisplay'</span>, <span class="s1">'IRkernel/IRkernel'</span><span class="o">))</span>
+IRkernel::installspec<span class="o">(</span><span class="nv">user</span> <span class="o">=</span> FALSE<span class="o">)</span>
+</pre></div>
 
 </div>
 </div>
@@ -80,8 +97,12 @@ MathJax.Hub.Config({
   </div>
 
         </div>
-        
-                    <div id="fb-root"></div>
+                <ul class="pager hidden-print">
+<li class="previous">
+                <a href="../brew/" rel="prev" title="Brew">Previous post</a>
+            </li>
+        </ul>
+<div id="fb-root"></div>
 <script>
   window.fbAsyncInit = function() {
     // init the FB JS SDK
@@ -101,7 +122,7 @@ MathJax.Hub.Config({
      js.src = "https://connect.facebook.net/en_US/all.js";
      fjs.parentNode.insertBefore(js, fjs);
    }(document, 'script', 'facebook-jssdk'));
-</script><div class="fb-comments" data-href="http://adalace.org/stories/about-me/" data-width="470"></div>
+</script><div class="fb-comments" data-href="http://adalace.org/posts/irkernelirkernel-running-r-kernel-for-jupyter/" data-width="470"></div>
 
 
     </div>

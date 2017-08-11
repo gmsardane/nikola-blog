@@ -11,7 +11,7 @@
  </url>
  <url>
   <loc>http://adalace.org/2016/</loc>
-  <lastmod>2016-06-13T14:18:00Z</lastmod>
+  <lastmod>2016-07-14T22:18:00Z</lastmod>
  </url>
  <url>
   <loc>http://adalace.org/2016/05/</loc>
@@ -22,8 +22,12 @@
   <lastmod>2016-06-13T14:18:00Z</lastmod>
  </url>
  <url>
+  <loc>http://adalace.org/2016/07/</loc>
+  <lastmod>2016-07-14T22:18:00Z</lastmod>
+ </url>
+ <url>
   <loc>http://adalace.org/archive.html</loc>
-  <lastmod>2016-06-28T04:02:00Z</lastmod>
+  <lastmod>2016-07-14T22:18:00Z</lastmod>
  </url>
  <url>
   <loc>http://adalace.org/categories/</loc>
@@ -46,6 +50,10 @@
   <lastmod>2016-06-02T05:46:00Z</lastmod>
  </url>
  <url>
+  <loc>http://adalace.org/posts/brew/</loc>
+  <lastmod>2016-07-14T22:18:00Z</lastmod>
+ </url>
+ <url>
   <loc>http://adalace.org/posts/calculating-dndz-parameters/</loc>
   <lastmod>2016-06-24T19:34:00Z</lastmod>
  </url>
@@ -64,6 +72,10 @@
  <url>
   <loc>http://adalace.org/posts/ipython-notebook/</loc>
   <lastmod>2016-06-02T05:46:00Z</lastmod>
+ </url>
+ <url>
+  <loc>http://adalace.org/posts/irkernelirkernel-running-r-kernel-for-jupyter/</loc>
+  <lastmod>2016-07-14T22:18:00Z</lastmod>
  </url>
  <url>
   <loc>http://adalace.org/posts/ocaml-and-jupyter/</loc>
