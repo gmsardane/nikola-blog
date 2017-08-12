@@ -8,12 +8,7 @@ fb: http://ogp.me/ns/fb#
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width">
 <title>Python Cheatsheet | Adalace</title>
-<link href="../../assets/css/bitter.css" rel="stylesheet" type="text/css">
-<link href="../../assets/css/main.css" rel="stylesheet" type="text/css">
-<link href="../../assets/css/rst.css" rel="stylesheet" type="text/css">
-<link href="../../assets/css/code.css" rel="stylesheet" type="text/css">
-<link href="../../assets/css/ipython.min.css" rel="stylesheet" type="text/css">
-<link href="../../assets/css/nikola_ipython.css" rel="stylesheet" type="text/css">
+<link href="../../assets/css/all-nocdn.css" rel="stylesheet" type="text/css">
 <link rel="alternate" type="application/rss+xml" title="RSS" href="../../rss.xml">
 <link rel="canonical" href="http://adalace.org/posts/python-cheatsheet/">
 <meta property="fb:app_id" content="">
@@ -208,9 +203,9 @@ c = 1.0e5       # ">
 
 <span class="c1"># Class</span>
 <span class="k">class</span> <span class="nc">Point</span><span class="p">(</span><span class="nb">object</span><span class="p">):</span>
-    <span class="k">def</span> <span class="nf">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">x</span><span class="p">):</span>
+    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">x</span><span class="p">):</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">x</span> <span class="o">=</span> <span class="n">x</span>
-    <span class="k">def</span> <span class="nf">__call__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+    <span class="k">def</span> <span class="fm">__call__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
         <span class="k">print</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">x</span><span class="p">)</span>
 
 <span class="n">x</span> <span class="o">=</span> <span class="n">Point</span><span class="p">(</span><span class="mi">3</span><span class="p">)</span>
@@ -227,9 +222,9 @@ c = 1.0e5       # ">
 
 <span class="c1"># Decorators</span>
 <span class="k">class</span> <span class="nc">myDecorator</span><span class="p">(</span><span class="nb">object</span><span class="p">):</span>
-    <span class="k">def</span> <span class="nf">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">f</span><span class="p">):</span>
+    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">f</span><span class="p">):</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">f</span> <span class="o">=</span> <span class="n">f</span>
-    <span class="k">def</span> <span class="nf">__call__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+    <span class="k">def</span> <span class="fm">__call__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
         <span class="k">print</span><span class="p">(</span><span class="s2">"call"</span><span class="p">)</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">f</span><span class="p">()</span>
 
@@ -276,7 +271,10 @@ c = 1.0e5       # ">
 
 
 <div class="output_area">
+
 <div class="prompt"></div>
+
+
 <div class="output_subarea output_stream output_stdout output_text">
 <pre> 1 
  1.0 
@@ -321,7 +319,10 @@ c = 1.0e5       # ">
 
 
 <div class="output_area">
+
 <div class="prompt"></div>
+
+
 <div class="output_subarea output_stream output_stdout output_text">
 <pre>['a', 'b', 'c']
 </pre>
@@ -351,7 +352,10 @@ c = 1.0e5       # ">
 
 
 <div class="output_area">
+
 <div class="prompt"></div>
+
+
 <div class="output_subarea output_stream output_stdout output_text">
 <pre>[0, 1, 2, 3, 4]
 </pre>
@@ -381,7 +385,10 @@ c = 1.0e5       # ">
 
 
 <div class="output_area">
+
 <div class="prompt"></div>
+
+
 <div class="output_subarea output_stream output_stdout output_text">
 <pre>[0, 1, 4, 9, 16]
 </pre>
@@ -411,7 +418,10 @@ c = 1.0e5       # ">
 
 
 <div class="output_area">
+
 <div class="prompt"></div>
+
+
 <div class="output_subarea output_stream output_stdout output_text">
 <pre>[0, 1, 4]
 </pre>
@@ -441,7 +451,10 @@ c = 1.0e5       # ">
 
 
 <div class="output_area">
+
 <div class="prompt"></div>
+
+
 <div class="output_subarea output_stream output_stdout output_text">
 <pre>0
 </pre>
@@ -471,7 +484,10 @@ c = 1.0e5       # ">
 
 
 <div class="output_area">
+
 <div class="prompt"></div>
+
+
 <div class="output_subarea output_stream output_stdout output_text">
 <pre>[1]
 </pre>
@@ -501,7 +517,10 @@ c = 1.0e5       # ">
 
 
 <div class="output_area">
+
 <div class="prompt"></div>
+
+
 <div class="output_subarea output_stream output_stdout output_text">
 <pre>['a', 'b', 'c']
 </pre>
@@ -531,7 +550,10 @@ c = 1.0e5       # ">
 
 
 <div class="output_area">
+
 <div class="prompt"></div>
+
+
 <div class="output_subarea output_stream output_stdout output_text">
 <pre>['x', 'x', 'x', 'x', 'x']
 </pre>
@@ -560,7 +582,10 @@ c = 1.0e5       # ">
 
 
 <div class="output_area">
+
 <div class="prompt output_prompt">Out[10]:</div>
+
+
 
 
 <div class="output_text output_subarea output_execute_result">
@@ -591,7 +616,10 @@ c = 1.0e5       # ">
 
 
 <div class="output_area">
+
 <div class="prompt output_prompt">Out[11]:</div>
+
+
 
 
 <div class="output_text output_subarea output_execute_result">
@@ -622,7 +650,10 @@ c = 1.0e5       # ">
 
 
 <div class="output_area">
+
 <div class="prompt output_prompt">Out[12]:</div>
+
+
 
 
 <div class="output_text output_subarea output_execute_result">
@@ -641,7 +672,7 @@ c = 1.0e5       # ">
         </div>
                 <ul class="pager hidden-print">
 <li class="previous">
-                <a href="../ipython-notebook/" rel="prev" title="Bongbong, Leni, and Benford: The Philippine Vice Presidential Race">Previous post</a>
+                <a href="../ipython-notebook/" rel="prev" title="Electoral Fraud in the Phil Vice Presidential Race?">Previous post</a>
             </li>
             <li class="next">
                 <a href="../effects-of-the-new-hst-2016-calibration-corrections-m31-results-pid-11658/" rel="next" title="Effects of the New HST 2016 Calibration Corrections on M31 Results (PID: 11658)">Next post</a>
@@ -671,11 +702,11 @@ c = 1.0e5       # ">
 
 
     </div>
-                    <footer id="footer"><p>Contents © 2016         <a href="mailto:gen@adalace.org">lovelyquark</a> - Powered by         <a href="https://getnikola.com" rel="nofollow">Nikola</a>         </p>
+                    <footer id="footer"><p>Contents © 2017         <a href="mailto:gen@adalace.org">lovelyquark</a> - Powered by         <a href="https://getnikola.com" rel="nofollow">Nikola</a>         </p>
             
         </footer>
 </div>
-    </section><script src="../../assets/js/jquery-1.10.2.min.js" type="text/javascript"></script><script src="../../assets/js/jquery.timeago.js" type="text/javascript"></script><script src="../../assets/js/mathjax.js" type="text/javascript"></script><script type="text/javascript">
+    </section><script src="../../assets/js/all-nocdn.js" type="text/javascript"></script><script type="text/javascript">
             $(function(){
                 $('.timeago').timeago();
             });

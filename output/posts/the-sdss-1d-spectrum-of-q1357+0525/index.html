@@ -8,12 +8,7 @@ fb: http://ogp.me/ns/fb#
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width">
 <title>The SDSS 1D Spectrum of Q1357+0525 | Adalace</title>
-<link href="../../assets/css/bitter.css" rel="stylesheet" type="text/css">
-<link href="../../assets/css/main.css" rel="stylesheet" type="text/css">
-<link href="../../assets/css/rst.css" rel="stylesheet" type="text/css">
-<link href="../../assets/css/code.css" rel="stylesheet" type="text/css">
-<link href="../../assets/css/ipython.min.css" rel="stylesheet" type="text/css">
-<link href="../../assets/css/nikola_ipython.css" rel="stylesheet" type="text/css">
+<link href="../../assets/css/all-nocdn.css" rel="stylesheet" type="text/css">
 <link rel="alternate" type="application/rss+xml" title="RSS" href="../../rss.xml">
 <link rel="canonical" href="http://adalace.org/posts/the-sdss-1d-spectrum-of-q1357%2B0525/">
 <meta property="fb:app_id" content="">
@@ -53,8 +48,7 @@ HTML('&lt;style&gt;{}&lt;/style&gt;'.format(css));
 
 
 
-
-Here, I de">
+Here, I dem">
 <meta property="og:type" content="article">
 <meta property="article:published_time" content="2016-06-27T15:43:07-05:00">
 </head>
@@ -179,8 +173,8 @@ Here, I de">
     <span class="n">plt</span><span class="o">.</span><span class="n">xlim</span><span class="p">(</span><span class="n">min_wave</span><span class="p">,</span> <span class="n">max_wave</span><span class="p">)</span>
     <span class="n">flux_vals</span> <span class="o">=</span> <span class="n">flux</span><span class="p">[</span><span class="n">np</span><span class="o">.</span><span class="n">where</span><span class="p">((</span><span class="n">wave</span> <span class="o">&gt;=</span> <span class="n">min_wave</span><span class="p">)</span> <span class="o">&amp;</span> <span class="p">(</span><span class="n">wave</span> <span class="o">&lt;=</span> <span class="n">max_wave</span><span class="p">))</span> <span class="p">]</span>
     <span class="n">plt</span><span class="o">.</span><span class="n">ylim</span><span class="p">(</span><span class="n">flux_vals</span><span class="o">.</span><span class="n">min</span><span class="p">(),</span> <span class="n">flux_vals</span><span class="o">.</span><span class="n">max</span><span class="p">())</span>
-    <span class="n">plt</span><span class="o">.</span><span class="n">xlabel</span><span class="p">(</span><span class="s1">'Observed Wavelength '</span><span class="o">+</span><span class="s1">r'[$\mathrm{\AA}$]'</span><span class="p">,</span> <span class="n">fontsize</span><span class="o">=</span><span class="mi">25</span><span class="p">)</span>
-    <span class="n">plt</span><span class="o">.</span><span class="n">ylabel</span><span class="p">(</span><span class="s1">r'$f_{\lambda}$ '</span><span class="o">+</span> <span class="s1">r'$\mathrm{[10^{-17} ergs/cm/\AA/s]}$'</span> <span class="p">,</span> <span class="n">fontsize</span><span class="o">=</span><span class="mi">25</span><span class="p">)</span>
+    <span class="n">plt</span><span class="o">.</span><span class="n">xlabel</span><span class="p">(</span><span class="s1">'Observed Wavelength '</span><span class="o">+</span><span class="sa">r</span><span class="s1">'[$\mathrm{\AA}$]'</span><span class="p">,</span> <span class="n">fontsize</span><span class="o">=</span><span class="mi">25</span><span class="p">)</span>
+    <span class="n">plt</span><span class="o">.</span><span class="n">ylabel</span><span class="p">(</span><span class="sa">r</span><span class="s1">'$f_{\lambda}$ '</span><span class="o">+</span> <span class="sa">r</span><span class="s1">'$\mathrm{[10^{-17} ergs/cm/\AA/s]}$'</span> <span class="p">,</span> <span class="n">fontsize</span><span class="o">=</span><span class="mi">25</span><span class="p">)</span>
     <span class="n">plt</span><span class="o">.</span><span class="n">minorticks_on</span><span class="p">()</span>
     <span class="n">plt</span><span class="o">.</span><span class="n">tight_layout</span><span class="p">()</span>
     <span class="n">plt</span><span class="o">.</span><span class="n">tick_params</span><span class="p">(</span><span class="s1">'both'</span><span class="p">,</span> <span class="n">length</span><span class="o">=</span><span class="mi">8</span><span class="p">,</span> <span class="n">width</span><span class="o">=</span><span class="mi">2</span><span class="p">,</span> <span class="n">which</span><span class="o">=</span><span class="s1">'minor'</span><span class="p">)</span>
@@ -224,7 +218,10 @@ Here, I de">
 
 
 <div class="output_area">
+
 <div class="prompt"></div>
+
+
 
 
 <div class="output_png output_subarea ">
@@ -273,11 +270,11 @@ Here, I de">
 
 
     </div>
-                    <footer id="footer"><p>Contents © 2016         <a href="mailto:gen@adalace.org">lovelyquark</a> - Powered by         <a href="https://getnikola.com" rel="nofollow">Nikola</a>         </p>
+                    <footer id="footer"><p>Contents © 2017         <a href="mailto:gen@adalace.org">lovelyquark</a> - Powered by         <a href="https://getnikola.com" rel="nofollow">Nikola</a>         </p>
             
         </footer>
 </div>
-    </section><script src="../../assets/js/jquery-1.10.2.min.js" type="text/javascript"></script><script src="../../assets/js/jquery.timeago.js" type="text/javascript"></script><script src="../../assets/js/mathjax.js" type="text/javascript"></script><script type="text/javascript">
+    </section><script src="../../assets/js/all-nocdn.js" type="text/javascript"></script><script type="text/javascript">
             $(function(){
                 $('.timeago').timeago();
             });

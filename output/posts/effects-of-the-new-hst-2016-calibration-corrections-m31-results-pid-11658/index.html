@@ -8,12 +8,7 @@ fb: http://ogp.me/ns/fb#
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width">
 <title>Effects of the New HST 2016 Calibration Corrections on M31 Results (PID: 11658) | Adalace</title>
-<link href="../../assets/css/bitter.css" rel="stylesheet" type="text/css">
-<link href="../../assets/css/main.css" rel="stylesheet" type="text/css">
-<link href="../../assets/css/rst.css" rel="stylesheet" type="text/css">
-<link href="../../assets/css/code.css" rel="stylesheet" type="text/css">
-<link href="../../assets/css/ipython.min.css" rel="stylesheet" type="text/css">
-<link href="../../assets/css/nikola_ipython.css" rel="stylesheet" type="text/css">
+<link href="../../assets/css/all-nocdn.css" rel="stylesheet" type="text/css">
 <link rel="alternate" type="application/rss+xml" title="RSS" href="../../rss.xml">
 <link rel="canonical" href="http://adalace.org/posts/effects-of-the-new-hst-2016-calibration-corrections-m31-results-pid-11658/">
 <meta property="fb:app_id" content="">
@@ -53,8 +48,7 @@ HTML('&lt;style&gt;{}&lt;/style&gt;'.format(css));
 
 
 
-
-Old versus">
+Old versus ">
 <meta property="og:type" content="article">
 <meta property="article:published_time" content="2016-06-22T12:19:31-05:00">
 <meta property="article:tag" content="astro">
@@ -248,8 +242,8 @@ Old versus">
     <span class="c1">#plot the OLD spectrum</span>
     <span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">oldspec</span><span class="p">[</span><span class="s1">'lambda'</span><span class="p">],</span> <span class="n">oldspec</span><span class="p">[</span><span class="s1">'flux'</span><span class="p">],</span> <span class="n">linestyle</span><span class="o">=</span><span class="s1">'--'</span><span class="p">,</span> <span class="n">drawstyle</span><span class="o">=</span><span class="s1">'steps'</span><span class="p">,</span><span class="n">lw</span><span class="o">=</span><span class="mf">1.5</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="s1">'OLD'</span><span class="p">)</span>
     <span class="c1">#plot the NEW spectrum</span>
-    <span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">wave</span><span class="p">,</span> <span class="n">flux</span><span class="o">*</span><span class="mi">1</span><span class="n">e16</span><span class="p">,</span>  <span class="n">lw</span><span class="o">=</span><span class="mf">1.5</span><span class="p">,</span> <span class="n">linestyle</span><span class="o">=</span><span class="s1">'dashdot'</span><span class="p">,</span> <span class="n">drawstyle</span><span class="o">=</span><span class="s1">'steps'</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="s1">'NEW'</span><span class="p">)</span>
-    <span class="n">plt</span><span class="o">.</span><span class="n">xlabel</span><span class="p">(</span><span class="s1">'Observed Wavelength '</span><span class="o">+</span><span class="s1">r'[$\AA$]'</span><span class="p">,</span> <span class="n">fontsize</span><span class="o">=</span><span class="mi">20</span><span class="p">)</span>
+    <span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">wave</span><span class="p">,</span> <span class="n">flux</span><span class="o">*</span><span class="mf">1e16</span><span class="p">,</span>  <span class="n">lw</span><span class="o">=</span><span class="mf">1.5</span><span class="p">,</span> <span class="n">linestyle</span><span class="o">=</span><span class="s1">'dashdot'</span><span class="p">,</span> <span class="n">drawstyle</span><span class="o">=</span><span class="s1">'steps'</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="s1">'NEW'</span><span class="p">)</span>
+    <span class="n">plt</span><span class="o">.</span><span class="n">xlabel</span><span class="p">(</span><span class="s1">'Observed Wavelength '</span><span class="o">+</span><span class="sa">r</span><span class="s1">'[$\AA$]'</span><span class="p">,</span> <span class="n">fontsize</span><span class="o">=</span><span class="mi">20</span><span class="p">)</span>
     <span class="n">plt</span><span class="o">.</span><span class="n">ylabel</span><span class="p">(</span><span class="s1">'Unnormalized Flux'</span><span class="p">,</span> <span class="n">fontsize</span><span class="o">=</span><span class="mi">20</span><span class="p">)</span>
     <span class="n">plt</span><span class="o">.</span><span class="n">xlim</span><span class="p">(</span><span class="mi">2785</span><span class="p">,</span> <span class="mi">2860</span><span class="p">)</span>
     <span class="n">swave</span> <span class="o">=</span> <span class="n">oldspec</span><span class="o">.</span><span class="n">flux</span><span class="o">.</span><span class="n">where</span><span class="p">((</span><span class="n">oldspec</span><span class="p">[</span><span class="s1">'lambda'</span><span class="p">]</span> <span class="o">&gt;=</span> <span class="mi">2790</span><span class="p">)</span> <span class="o">&amp;</span> <span class="p">(</span><span class="n">oldspec</span><span class="p">[</span><span class="s1">'lambda'</span><span class="p">]</span> <span class="o">&lt;=</span> <span class="mi">2810</span><span class="p">))</span>
@@ -298,7 +292,10 @@ Old versus">
 
 
 <div class="output_area">
+
 <div class="prompt"></div>
+
+
 <div class="output_subarea output_stream output_stderr output_text">
 <pre>/home/ec2-user/.pyenv/versions/3.5.1/lib/python3.5/site-packages/matplotlib/font_manager.py:1288: UserWarning: findfont: Font family ['serif'] not found. Falling back to Bitstream Vera Sans
   (prop.get_family(), self.defaultFamily[fontext]))
@@ -307,7 +304,10 @@ Old versus">
 </div>
 
 <div class="output_area">
+
 <div class="prompt"></div>
+
+
 
 
 <div class="output_png output_subarea ">
@@ -317,7 +317,10 @@ Old versus">
 </div>
 
 <div class="output_area">
+
 <div class="prompt"></div>
+
+
 
 
 <div class="output_png output_subarea ">
@@ -327,7 +330,10 @@ Old versus">
 </div>
 
 <div class="output_area">
+
 <div class="prompt"></div>
+
+
 
 
 <div class="output_png output_subarea ">
@@ -337,7 +343,10 @@ Old versus">
 </div>
 
 <div class="output_area">
+
 <div class="prompt"></div>
+
+
 
 
 <div class="output_png output_subarea ">
@@ -347,7 +356,10 @@ Old versus">
 </div>
 
 <div class="output_area">
+
 <div class="prompt"></div>
+
+
 
 
 <div class="output_png output_subarea ">
@@ -357,7 +369,10 @@ Old versus">
 </div>
 
 <div class="output_area">
+
 <div class="prompt"></div>
+
+
 
 
 <div class="output_png output_subarea ">
@@ -367,7 +382,10 @@ Old versus">
 </div>
 
 <div class="output_area">
+
 <div class="prompt"></div>
+
+
 
 
 <div class="output_png output_subarea ">
@@ -377,7 +395,10 @@ Old versus">
 </div>
 
 <div class="output_area">
+
 <div class="prompt"></div>
+
+
 
 
 <div class="output_png output_subarea ">
@@ -387,7 +408,10 @@ Old versus">
 </div>
 
 <div class="output_area">
+
 <div class="prompt"></div>
+
+
 
 
 <div class="output_png output_subarea ">
@@ -397,7 +421,10 @@ Old versus">
 </div>
 
 <div class="output_area">
+
 <div class="prompt"></div>
+
+
 
 
 <div class="output_png output_subarea ">
@@ -407,7 +434,10 @@ Old versus">
 </div>
 
 <div class="output_area">
+
 <div class="prompt"></div>
+
+
 
 
 <div class="output_text output_subarea ">
@@ -466,11 +496,11 @@ Old versus">
 
 
     </div>
-                    <footer id="footer"><p>Contents © 2016         <a href="mailto:gen@adalace.org">lovelyquark</a> - Powered by         <a href="https://getnikola.com" rel="nofollow">Nikola</a>         </p>
+                    <footer id="footer"><p>Contents © 2017         <a href="mailto:gen@adalace.org">lovelyquark</a> - Powered by         <a href="https://getnikola.com" rel="nofollow">Nikola</a>         </p>
             
         </footer>
 </div>
-    </section><script src="../../assets/js/jquery-1.10.2.min.js" type="text/javascript"></script><script src="../../assets/js/jquery.timeago.js" type="text/javascript"></script><script src="../../assets/js/mathjax.js" type="text/javascript"></script><script type="text/javascript">
+    </section><script src="../../assets/js/all-nocdn.js" type="text/javascript"></script><script type="text/javascript">
             $(function(){
                 $('.timeago').timeago();
             });
